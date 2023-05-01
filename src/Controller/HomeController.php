@@ -20,6 +20,7 @@ class HomeController
         $newSlug = str_replace('-',' ',$slug);
         $newSlug = u($newSlug)->title(true);
         return new Response('Olá '.$newSlug.' ! ');
+
     }
 
 }
