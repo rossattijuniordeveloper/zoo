@@ -1,11 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+{% block stylesheets %}
+    <!-- novo CSS -->
+    {{ parent()  }}
+
+{%endblock%}
+
 <h1>{{ title }}</h1>
 Bem-Vindo ao nosso Site !
 
 <ul>
     {# Comentário #}
-{% for user in users %}
-
-    <li>Nome: {{ user.name }} que tem o telefone.: {{ user.telefone }}</li>
-
-{% endfor %}
+    {% for user in users %}
+        <li>
+            {% if user.name=='Marciano' %}
+                Nome: {{ user.name | upper }} que tem o telefone.: {{ user.telefone }}
+            {% else %}
+                Nome: {{ user.name |lower}} que tem o telefone.: {{ user.telefone }}
+            {% endif %}
+        </li>
+    {% endfor %}
 </ul>
+{% endblock %}
