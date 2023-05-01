@@ -13,4 +13,10 @@ class HomeController
         return new Response('Olá Mundo ! ');
     }
 
+    #[Route('/dinossauro')]
+    public function  dinossauro():Response
+    {
+        return new Response('Olá Dino ! ');
+    }
+
 }
