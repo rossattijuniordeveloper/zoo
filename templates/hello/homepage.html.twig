@@ -1,0 +1,11 @@
+<h1>{{ title }}</h1>
+Bem-Vindo ao nosso Site !
+
+<ul>
+    {# Comentário #}
+{% for user in users %}
+
+    <li>Nome: {{ user.name }} que tem o telefone.: {{ user.telefone }}</li>
+
+{% endfor %}
+</ul>
