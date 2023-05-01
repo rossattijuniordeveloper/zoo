@@ -50,7 +50,10 @@ class HomeController
     {
         return new Response('Olá Peixes !, espero que voces não sejam traíras ;)');
     }
-
-
+    #[Route('/cats')]
+    public function cats():Response
+    {
+        return new Response('Olá (Cats) Felinos!');
+    }
 
 }
