@@ -56,4 +56,11 @@ class HomeController
         return new Response('Olá (Cats) Felinos!');
     }
 
+    #[Route('/dogs')]
+    public function dogs():Response
+    {
+        return new Response('Olá (Dogs) Canídeos!');
+    }
+
+
 }
